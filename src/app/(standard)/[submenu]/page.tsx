@@ -1,13 +1,19 @@
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+import { About, Contact, Home } from "@/components/pages/PageModules";
 
-  switch (slug) {
+export default async function Page({
+  params,
+}: {
+  params: { submenu: string };
+}) {
+  const { submenu } = await params;
+
+  switch (submenu) {
     case "home":
-      return <h1>Home</h1>;
+      return <Home />;
     case "about":
-      return <h1>About</h1>;
+      return <About />;
     case "contact":
-      return <h1>Contact</h1>;
+      return <Contact />;
 
     default:
       return <h1>Page not found</h1>;

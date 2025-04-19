@@ -1,8 +1,8 @@
-import { useState } from "react";
+"use client";
+
+import "@/styles/globals.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
   return (
     <>
       <main>{children}</main>
