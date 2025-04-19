@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nicole Villatura",
+  title: "maivlltr ♡",
   description: "Developed by JLaxy and Sehae",
 };
 

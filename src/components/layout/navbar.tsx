@@ -1,7 +1,11 @@
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 
 export function Navbar() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  return <div>hello</div>;
+  return (
+    <div className="text-center m-3 rounded-2xl border-1 border-black">
+      nmaiv
+    </div>
+  );
 }
