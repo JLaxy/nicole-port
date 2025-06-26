@@ -1,0 +1,21 @@
+services:
+  # Service 1
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # Ports that will be available on the host
+    ports:
+      - "3000:3000"
+    develop:
+      # Files that docker will watch for changes
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./next.config.js
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: .
+          target: /app
+          action: sync

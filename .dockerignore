@@ -1,0 +1,36 @@
+# Node modules (will be installed inside container)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Local environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Next.js build output (rebuilt in container)
+.next
+out
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Git
+.git
+.gitignore
+
+# Docker files (optional if not needed in image)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# VSCode or IDE folders
+.vscode
+.idea
