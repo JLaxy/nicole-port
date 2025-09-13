@@ -5,14 +5,15 @@ import { ReactNode } from "react";
 interface SectionProps {
   id: string;
   children: ReactNode;
-  className?: string; // optional to allow overrides
+  className?: string;
+  fullScreen?: boolean;
 }
 
-export function CSection({ id, children, className = "" }: SectionProps) {
+export function CSection({ id, children, className = "", fullScreen = true }: SectionProps) {
   return (
     <section
       id={id}
-      className={`h-screen flex items-center justify-center bg-gray-100 ${className}`}
+      className={`${fullScreen ? "h-screen" : "py-20"} flex items-center justify-center ${className}`}
     >
       {children}
     </section>
