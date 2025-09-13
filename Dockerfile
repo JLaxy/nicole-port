@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 3000
 
 # Run App
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+CMD ["sleep", "infinity"]
