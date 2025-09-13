@@ -1,7 +1,12 @@
-export default function Home() {
+import { CSection } from "@/components/section-layout";
+import About from "@/sections/about";
+
+export default function HomePage() {
   return (
-    <>
-      <h1>Welcome to Next.js!</h1>
-    </>
+    <div>
+      <CSection id="about">
+        <About />
+      </CSection>
+    </div>
   );
 }
