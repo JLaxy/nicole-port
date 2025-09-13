@@ -25,7 +25,8 @@
         "oderwat.indent-rainbow",
         "Zignd.html-css-class-completion",
         "helixquar.randomeverything",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
       ]
     }
   }
