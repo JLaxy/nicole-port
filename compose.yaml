@@ -19,3 +19,12 @@ services:
         - path: .
           target: /app
           action: sync
+# services:
+#   frontend:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:3000"
+#     volumes:
+#       - ./:/app # Mount current directory into /app inside container

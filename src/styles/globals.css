@@ -1,26 +1,43 @@
+/* ✅ Load fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins&display=swap");
+
+/* ✅ Tailwind import must come after font import */
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #ededed;
+  --secondary-color: #e9d4b8;
+
+  /* ✅ Custom fonts */
+  --heading-font: "Cormorant Garamond", serif;
+  --sub-font: "Poppins", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ✅ Global base styles */
+@layer base {
+  body {
+    color: var(--primary-color);
+    font-family: var(--sub-font);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ✅ Component styles */
+@layer components {
+  .front-div {
+    /* Using Tailwind utilities */
+    @apply w-full h-full bg-center bg-no-repeat bg-cover;
+  }
+
+  .title-text {
+    font-family: var(--heading-font);
+    margin: 0;
+    line-height: 0.7;
+  }
+
+  .sub-text {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    margin: 0;
+    line-height: 1;
+  }
 }
