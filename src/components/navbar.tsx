@@ -7,7 +7,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed mt-3 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-3/4 md:w-1/2 bg-white shadow-md z-50 rounded-2xl overflow-hidden">
+    <nav className="fixed mt-3 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-3/4 md:w-1/2 bg-white shadow-md z-50 rounded-2xl overflow-hidden text-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex justify-between h-16 items-center">

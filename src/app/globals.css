@@ -4,6 +4,10 @@
 /* ✅ Tailwind import must come after font import */
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #ededed;
   --secondary-color: #e9d4b8;
