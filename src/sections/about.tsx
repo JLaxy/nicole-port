@@ -62,7 +62,7 @@ export default function About() {
             {/* Right Side Content */}
             <div className="flex-1 flex-col flex items-center justify-center">
                 <div className="space-y-4">
-                    <h1 className="text-9xl">HI, I'M <span className="about-title text-9xl">MAI</span>
+                    <h1 className="text-9xl">{"HI, I'M "}<span className="about-title text-9xl">MAI</span>
                     </h1>
                     <p className="mt-4 text-lg max-w-xl">
                     {"I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."}
