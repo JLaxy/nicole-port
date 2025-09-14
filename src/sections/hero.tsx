@@ -1,3 +1,5 @@
+"use client";
+
 import { AiFillTikTok } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";

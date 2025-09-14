@@ -3,16 +3,18 @@
 import { navbarData } from "@/data/navbar-data";
 import { useState } from "react";
 
+import "@/styles/nav.css";
+
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed mt-3 left-1/2 transform -translate-x-1/2 w-11/12 sm:w-3/4 md:w-1/2 bg-white shadow-md z-50 rounded-2xl overflow-hidden text-neutral-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="nav-div nav-style">
+      <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <a href="#home" className="text-xl font-bold hover:text-amber-400">
+          <a href="#home" className="nav-title">
             MAI UGC
           </a>
 
@@ -22,7 +24,7 @@ export function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="hover:text-amber-400"
+                className="nav-link"
               >
                 {item.label}
               </a>
@@ -32,7 +34,7 @@ export function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden hover:text-amber-400"
+            className="md:hidden hover:text-white"
           >
             {isOpen ? "✕" : "☰"}
           </button>
@@ -46,7 +48,7 @@ export function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="block hover:text-amber-400"
+              className="block nav-link"
               onClick={() => setIsOpen(false)}
             >
               {item.label}

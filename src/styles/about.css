@@ -1,0 +1,11 @@
+/* ✅ Tailwind import must come after font import */
+@import "tailwindcss";
+
+@layer components {
+    .about-section {
+        @apply lg:h-screen grid p-10 py-10 md:grid-cols-2 md:grid-rows-1 grid-rows-2;
+    }
+    .about-title {
+        color: var(--secondary-color);
+    }
+}
