@@ -24,4 +24,18 @@ html {
     color: var(--primary-color);
     font-family: var(--sub-font);
   }
+  h1 {
+    font-family: var(--heading-font);
+  }
+}
+
+.styled-button {
+  @apply bg-black border mt-5 px-6 py-2 rounded-full text-lg text-white 
+        transition-transform duration-200;
+  border-color: var(--secondary-color);
+  font-family: var(--heading-font);
+}
+
+.styled-button:hover {
+  @apply scale-105;
 }

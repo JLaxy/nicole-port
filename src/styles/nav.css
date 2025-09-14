@@ -1,0 +1,30 @@
+/* ✅ Tailwind import must come after font import */
+@import "tailwindcss";
+
+@layer components {
+    .nav-div {
+        @apply fixed mt-3 left-1/2 transform -translate-x-1/2 
+                w-11/12 sm:w-3/4 lg:w-2/3 xl:w-1/2 
+                bg-white shadow-md z-50 rounded-2xl overflow-hidden text-neutral-900
+                select-none;
+    }
+    .nav-title {
+        @apply font-bold text-2xl;
+        font-family: var(--heading-font);
+        color: var(--primary-color);
+    }
+
+    .nav-title:hover {
+        color: var(--secondary-color);
+    }
+    .nav-style {
+        @apply bg-black text-white;
+        font-family: var(--secondary-font); 
+    }
+    .nav-link {
+        @apply uppercase;
+    }
+    .nav-link:hover {
+        color: var(--secondary-color);
+    }
+}

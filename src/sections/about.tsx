@@ -1,49 +1,69 @@
 "use client";
 
 import Image from "next/image";
+import "@/styles/about.css";
 
 export default function About() {
     return (
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 w-full h-screen p-10">
+        <div className="about-section">
 
             {/* Left Side Content */}
             <div className="flex-1 flex-col flex items-center justify-center space-y-4">
                 {/* Tiktok Handle */}
                 <div className="flex-col flex items-center justify-center">
-                    <h1 className="text-3xl font-bold text-white">mai</h1>
-                    <h1 className="font-light text-white">@gorgmai</h1>
+                    <h2 className="text-3xl font-bold text-white">mai</h2>
+                    <h2 className="font-light text-white">@gorgmai</h2>
                 </div>
 
                 {/* Profile Image */}
-                <Image 
-                    src="/images/tiktok-profile.png"
-                    alt="Tiktok Profile"
-                    width={350}
-                    height={350}
-                    className="rounded-3xl"
-                />
-
+                <div className="rounded-3xl">
+                    <a
+                        href="https://www.tiktok.com/@gorgmai" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <Image 
+                        src="/images/tiktok-profile.png"
+                        alt="Tiktok Profile"
+                        width={350}
+                        height={350}
+                        className="rounded-3xl transition duration-300 
+                                    border border-white/20 backdrop-blur-md bg-white/10 
+                                    hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        />
+                    </a>
+                </div>
+            
                 {/* Stats */}
                 <div className="flex-row flex items-center justify-center space-x-5">
                     <div className="flex-col flex items-center justify-center">
-                        <h1 className="text-3xl font-bold">74</h1>
-                        <h1 className="font-light">Following</h1>
+                        <h2 className="text-3xl font-bold">74</h2>
+                        <h2 className="font-light">Following</h2>
                     </div>
                     <div className="flex-col flex items-center justify-center">
-                        <h1 className="text-3xl font-bold">20.6k</h1>
-                        <h1 className="font-light">Followers</h1>
+                        <h2 className="text-3xl font-bold">20.6k</h2>
+                        <h2 className="font-light">Followers</h2>
                     </div>
                     <div className="flex-col flex items-center justify-center">
-                        <h1 className="text-3xl font-bold">529.5k</h1>
-                        <h1 className="font-light">Likes</h1>
+                        <h2 className="text-3xl font-bold">529.5k</h2>
+                        <h2 className="font-light">Likes</h2>
                     </div>
                 </div>
+                <a
+                    href="https://www.tiktok.com/@gorgmai" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="styled-button"
+                >
+                    Visit My Profile
+                </a>
             </div>
 
             {/* Right Side Content */}
             <div className="flex-1 flex-col flex items-center justify-center">
                 <div className="space-y-4">
-                    <h1 className="text-9xl font-bold">HI, I'M MAI</h1>
+                    <h1 className="text-9xl">HI, I'M <span className="about-title text-9xl">MAI</span>
+                    </h1>
                     <p className="mt-4 text-lg max-w-xl">
                     I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I’m new to the UGC, I come with knowledge in marketing as I’m currently studying Marketing Management.
                     <br/><br/>
