@@ -20,24 +20,3 @@
     font-family: var(--sub-font);
   }
 }
-
-/* ✅ Component styles */
-@layer components {
-  .front-div {
-    /* Using Tailwind utilities */
-    @apply w-full h-full bg-center bg-no-repeat bg-cover;
-  }
-
-  .title-text {
-    font-family: var(--heading-font);
-    margin: 0;
-    line-height: 0.7;
-  }
-
-  .sub-text {
-    font-family: var(--heading-font);
-    color: var(--secondary-color);
-    margin: 0;
-    line-height: 1;
-  }
-}
