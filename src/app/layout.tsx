@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
-  title: "maivlltr ♡",
-  description: "Developed by JLaxy and Sehae",
+  title: "MAI VILLATURA",
+  description: "UGC Creator",
 };
 
 export default function RootLayout({
@@ -12,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
