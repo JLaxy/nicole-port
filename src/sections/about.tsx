@@ -65,13 +65,13 @@ export default function About() {
                     <h1 className="text-9xl">HI, I'M <span className="about-title text-9xl">MAI</span>
                     </h1>
                     <p className="mt-4 text-lg max-w-xl">
-                    I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management.
+                    {"I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."}
                     <br/><br/>
-                    I'm passionate about discovering and sharing restaurants that are truly worth trying. I believe that great food deserves great exposure, and my goal is to help restaurants connect with the right audience through creative and relatable content.
+                    {"I'm passionate about discovering and sharing restaurants that are truly worth trying. I believe that great food deserves great exposure, and my goal is to help restaurants connect with the right audience through creative and relatable content."}
                     <br/><br/>
-                    I'm flexible, chronically online, and have a strong understanding of social media. This helps me stay up-to-date and quickly adapt to trends—so your content stays fresh, relevant, and engaging.
+                    {"I'm flexible, chronically online, and have a strong understanding of social media. This helps me stay up-to-date and quickly adapt to trends—so your content stays fresh, relevant, and engaging."}
                     <br/><br/>
-                    Right now, I'm focused on food and restaurant content, but I'm also looking forward to exploring product-based content in the future.
+                    {"Right now, I'm focused on food and restaurant content, but I'm also looking forward to exploring product-based content in the future."}
                     </p>
                 </div>
             </div>
