@@ -1,5 +1,6 @@
 import About from "@/sections/about";
 import {BenefitsP1, BenefitsP2} from "@/sections/benefits";
+import Email from "@/sections/email";
 import Hero from "@/sections/hero";
 
 export default function HomePage() {
@@ -22,7 +23,7 @@ export default function HomePage() {
         <h1 className="text-4xl font-bold">Contact Section</h1>
       </section>
       <section id="email">
-        <h1 className="text-4xl font-bold">Email Section</h1>
+        <Email />
       </section>
     </div>
   );

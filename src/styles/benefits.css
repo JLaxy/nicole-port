@@ -10,7 +10,11 @@
     }
 
     .benefit-right-side-content {
-        @apply items-end text-end;
+        @apply items-end text-end ps-20;
+    }
+
+    .benefit-left-side-content {
+        @apply pe-20;
     }
 
     .benefit-section p {
