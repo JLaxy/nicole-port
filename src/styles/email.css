@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer components {
+    .email-section {
+        @apply min-h-screen flex flex-col justify-center items-center;
+    }
+
+    .email-section form {
+        @apply w-full max-w-lg space-y-4;
+    }
+
+    .email-section input,
+    .email-section textarea {
+        @apply mt-1 block w-full rounded-lg border p-2 focus:outline-none;
+        border-color: var(--secondary-color);
+        background-color: var(--primary-color);
+        color: black;
+    }
+
+    .email-section input:focus,
+    .email-section textarea:focus {
+        border-color: var(--secondary-color) !important;
+        box-shadow: 0 0 0 2px var(--secondary-color);
+    }
+
+    .email-section label {
+        @apply block text-lg font-medium;
+        color: var(--primary-color);
+        font-family: var(--heading-font);
+    }
+
+}
