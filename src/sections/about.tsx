@@ -62,19 +62,16 @@ export default function About() {
 
             {/* Right Side Content */}
             <div className="right-side-content justify-center">
-                <div className="space-y-4 px-4 md:px-0">
-                    <h1 className="title">{"HI, I'M "}<span className="title title-highlight">MAI</span>
-                    </h1>
-                    <p className="mt-4 text-base md:text-lg max-w-xl">
-                    {"I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."}
-                    <br/><br/>
-                    {"I'm passionate about discovering and sharing restaurants that are truly worth trying. I believe that great food deserves great exposure, and my goal is to help restaurants connect with the right audience through creative and relatable content."}
-                    <br/><br/>
-                    {"I'm flexible, chronically online, and have a strong understanding of social media. This helps me stay up-to-date and quickly adapt to trends—so your content stays fresh, relevant, and engaging."}
-                    <br/><br/>
-                    {"Right now, I'm focused on food and restaurant content, but I'm also looking forward to exploring product-based content in the future."}
-                    </p>
-                </div>
+                <h1 className="title">{"HI, I'M "}<span className="title title-highlight">MAI</span></h1>
+                <p>
+                {"I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."}
+                <br/><br/>
+                {"I'm passionate about discovering and sharing restaurants that are truly worth trying. I believe that great food deserves great exposure, and my goal is to help restaurants connect with the right audience through creative and relatable content."}
+                <br/><br/>
+                {"I'm flexible, chronically online, and have a strong understanding of social media. This helps me stay up-to-date and quickly adapt to trends—so your content stays fresh, relevant, and engaging."}
+                <br/><br/>
+                {"Right now, I'm focused on food and restaurant content, but I'm also looking forward to exploring product-based content in the future."}
+                </p>
             </div>
         </div>
     );

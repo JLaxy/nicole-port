@@ -1,7 +1,9 @@
 import About from "@/sections/about";
 import {BenefitsP1, BenefitsP2} from "@/sections/benefits";
+import Contact from "@/sections/contact";
 import Email from "@/sections/email";
 import Hero from "@/sections/hero";
+import Showcase from "@/sections/showcase";
 
 export default function HomePage() {
   return (
@@ -13,14 +15,14 @@ export default function HomePage() {
         <About />
       </section>
       <section id="showcase">
-        <h1 className="text-4xl font-bold">Showcase Section</h1>
+        <Showcase />
       </section>
       <section id="benefits">
         <BenefitsP1 />
         <BenefitsP2 />
       </section>
       <section id="contact">
-        <h1 className="text-4xl font-bold">Contact Section</h1>
+        <Contact />
       </section>
       <section id="email">
         <Email />

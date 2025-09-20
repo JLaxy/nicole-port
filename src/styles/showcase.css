@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer components {
+    .showcase-section {
+        @apply min-h-screen flex flex-row p-6 justify-center items-center gap-6;
+    }
+}
