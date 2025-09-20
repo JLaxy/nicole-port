@@ -39,3 +39,12 @@ html {
 .styled-button:hover {
   @apply scale-105;
 }
+
+.title {
+  @apply text-6xl md:text-7xl lg:text-9xl;
+  
+}
+
+.title-highlight {
+  color: var(--secondary-color);
+}

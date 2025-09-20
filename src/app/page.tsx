@@ -1,4 +1,5 @@
 import About from "@/sections/about";
+import {BenefitsP1, BenefitsP2} from "@/sections/benefits";
 import Hero from "@/sections/hero";
 
 export default function HomePage() {
@@ -14,7 +15,8 @@ export default function HomePage() {
         <h1 className="text-4xl font-bold">Showcase Section</h1>
       </section>
       <section id="benefits">
-        <h1 className="text-4xl font-bold">Benefits Section</h1>
+        <BenefitsP1 />
+        <BenefitsP2 />
       </section>
       <section id="contact">
         <h1 className="text-4xl font-bold">Contact Section</h1>

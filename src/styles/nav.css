@@ -1,4 +1,3 @@
-/* ✅ Tailwind import must come after font import */
 @import "tailwindcss";
 
 @layer components {

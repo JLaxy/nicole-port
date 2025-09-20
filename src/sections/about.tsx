@@ -8,7 +8,7 @@ export default function About() {
         <div className="about-section">
 
             {/* Left Side Content */}
-            <div className="flex-1 flex-col flex items-center justify-center space-y-4">
+            <div className="left-side-content justify-start md:justify-center">
                 {/* Tiktok Handle */}
                 <div className="flex-col flex items-center justify-center">
                     <h2 className="text-3xl font-bold text-white">mai</h2>
@@ -16,7 +16,7 @@ export default function About() {
                 </div>
 
                 {/* Profile Image */}
-                <div className="rounded-3xl">
+                <div className="rounded-3xl mt-2">
                     <a
                         href="https://www.tiktok.com/@gorgmai" 
                         target="_blank" 
@@ -29,13 +29,14 @@ export default function About() {
                         height={350}
                         className="rounded-3xl transition duration-300 
                                     border border-white/20 backdrop-blur-md bg-white/10 
-                                    hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                                    hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] 
+                                    w-[280px] h-[280px] sm:w-[350px] sm:h-[350px]"
                         />
                     </a>
                 </div>
             
                 {/* Stats */}
-                <div className="flex-row flex items-center justify-center space-x-5">
+                <div className="flex-row flex items-center justify-center space-x-5 mt-2">
                     <div className="flex-col flex items-center justify-center">
                         <h2 className="text-3xl font-bold">74</h2>
                         <h2 className="font-light">Following</h2>
@@ -53,18 +54,18 @@ export default function About() {
                     href="https://www.tiktok.com/@gorgmai" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="styled-button"
+                    className="styled-button mt-4"
                 >
                     Visit My Profile
                 </a>
             </div>
 
             {/* Right Side Content */}
-            <div className="flex-1 flex-col flex items-center justify-center">
-                <div className="space-y-4">
-                    <h1 className="text-9xl">{"HI, I'M "}<span className="about-title text-9xl">MAI</span>
+            <div className="right-side-content justify-center">
+                <div className="space-y-4 px-4 md:px-0">
+                    <h1 className="title">{"HI, I'M "}<span className="title title-highlight">MAI</span>
                     </h1>
-                    <p className="mt-4 text-lg max-w-xl">
+                    <p className="mt-4 text-base md:text-lg max-w-xl">
                     {"I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."}
                     <br/><br/>
                     {"I'm passionate about discovering and sharing restaurants that are truly worth trying. I believe that great food deserves great exposure, and my goal is to help restaurants connect with the right audience through creative and relatable content."}

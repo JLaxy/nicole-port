@@ -1,11 +1,19 @@
-/* ✅ Tailwind import must come after font import */
 @import "tailwindcss";
 
 @layer components {
-    .about-section {
-        @apply lg:h-screen grid p-10 py-10 md:grid-cols-2 md:grid-rows-1 grid-rows-2;
-    }
-    .about-title {
-        color: var(--secondary-color);
-    }
+  .about-section {
+    @apply min-h-screen grid p-6 md:p-10 py-10 md:grid-cols-2 md:grid-rows-1 grid-rows-[auto_1fr];
+  }
+
+  .about-section p {
+    @apply leading-relaxed
+  }
+
+  .left-side-content {
+    @apply flex-1 flex-col flex items-center space-y-4 py-6 md:py-0;
+  }
+
+  .right-side-content {
+    @apply flex-1 flex-col flex items-center py-6 md:py-0;
+  }
 }

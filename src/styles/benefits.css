@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@layer components {
+    .benefit-section {
+        @apply min-h-screen grid p-6 md:p-10 py-10 md:grid-cols-2 md:grid-rows-1 grid-rows-[auto_1fr];
+    }
+
+    .benefit-left-side-content, .benefit-right-side-content {
+        @apply flex flex-col flex-1 justify-center p-10 gap-10;
+    }
+
+    .benefit-right-side-content {
+        @apply items-end text-end;
+    }
+
+    .benefit-section p {
+        @apply text-lg md:text-xl lg:text-2xl leading-relaxed;
+    }
+}
