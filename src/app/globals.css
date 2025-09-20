@@ -42,9 +42,12 @@ html {
 
 .title {
   @apply text-6xl md:text-7xl lg:text-9xl;
-  
 }
 
 .title-highlight {
   color: var(--secondary-color);
+}
+
+.title-other {
+  @apply text-6xl text-center;
 }

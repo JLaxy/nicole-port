@@ -2,6 +2,30 @@
 
 @layer components {
     .showcase-section {
-        @apply min-h-screen flex flex-row p-6 justify-center items-center gap-6;
+        @apply min-h-screen flex flex-col items-center justify-center;
+    }
+    .video-container {
+        @apply flex flex-row gap-6 lg:justify-center md:p-10 items-center sm:justify-start px-10 py-6;
+        @apply overflow-x-auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .video-container video {
+        @apply flex-shrink-0 rounded-xl shadow-lg;
+        scroll-snap-align: center;
+
+        width: 100%;
+        max-width: 24rem;
+    }
+
+    @media (max-width: 768px) {
+    .video-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+    .video-container {
+            -ms-overflow-style: none;  /* IE & Edge */
+            scrollbar-width: none;     /* Firefox */
+        }
     }
 }

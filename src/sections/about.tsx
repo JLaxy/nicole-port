@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import "@/styles/about.css";
+import { useState, useEffect } from "react";
 
 export default function About() {
+    
     return (
         <div className="about-section">
 
