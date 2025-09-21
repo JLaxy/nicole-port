@@ -10,7 +10,7 @@ export default function Hero() {
   const iconsSize = "clamp(1.5rem,6vw,2.5rem)";
   const desktopIconSize = "40px";
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
       {/*Mobile*/}
       <div className="hero-mobile-div lg:hidden">
         <div className="hero-mobile-title-div">
