@@ -1,17 +1,18 @@
 import About from "@/sections/about";
-import {BenefitsP1, BenefitsP2} from "@/sections/benefits";
+import { BenefitsP1, BenefitsP2 } from "@/sections/benefits";
 import Contact from "@/sections/contact";
-import Email from "@/sections/email";
+import EmailSection from "@/sections/email";
 import Hero from "@/sections/hero";
 import Showcase from "@/sections/showcase";
+import { Toaster } from "react-hot-toast";
 
 export default function HomePage() {
   return (
     <div>
-      <section id="home">
+      <section id="home" className="relative z-10">
         <Hero />
       </section>
-      <section id="about">
+      <section id="about" className="relative z-20">
         <About />
       </section>
       <section id="showcase">
@@ -25,8 +26,9 @@ export default function HomePage() {
         <Contact />
       </section>
       <section id="email">
-        <Email />
+        <EmailSection />
       </section>
+      <Toaster position="bottom-center" />
     </div>
   );
 }
