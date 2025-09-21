@@ -1,9 +1,10 @@
 import About from "@/sections/about";
 import { BenefitsP1, BenefitsP2 } from "@/sections/benefits";
 import Contact from "@/sections/contact";
-import Email from "@/sections/email";
+import EmailSection from "@/sections/email";
 import Hero from "@/sections/hero";
 import Showcase from "@/sections/showcase";
+import { Toaster } from "react-hot-toast";
 
 export default function HomePage() {
   return (
@@ -25,8 +26,9 @@ export default function HomePage() {
         <Contact />
       </section>
       <section id="email">
-        <Email />
+        <EmailSection />
       </section>
+      <Toaster position="bottom-center" />
     </div>
   );
 }
