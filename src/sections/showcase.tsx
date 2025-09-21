@@ -69,18 +69,27 @@ export default function Showcase() {
     }, [activeIndex, videos]);
 
     function playWithOverlay(video: HTMLVideoElement) {
-        video.muted = true;
-        video.playsInline = true;
-        video.play().catch(() => console.log("Autoplay blocked"));
+        const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
-        // Show temporary overlay
-        if (video.parentElement?.querySelector(".muted-overlay")) return;
-        const overlay = document.createElement("div");
-        overlay.className =
-        "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-50 pointer-events-none";
-        overlay.textContent = "🔇 Muted";
-        video.parentElement?.appendChild(overlay);
-        setTimeout(() => overlay.remove(), 1000);
+        video.playsInline = true;
+
+        if (isMobile) {
+            video.muted = false;   // 🔊 allow sound
+            video.play().catch(() => console.log("Autoplay blocked (mobile)"));
+        } else {
+            video.muted = true;    // 🔇 mute on desktop
+            video.play().catch(() => console.log("Autoplay blocked (desktop)"));
+
+            // show overlay only on desktop
+            if (!video.parentElement?.querySelector(".muted-overlay")) {
+            const overlay = document.createElement("div");
+            overlay.className =
+                "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-50 pointer-events-none";
+            overlay.textContent = "🔇 Muted";
+            video.parentElement?.appendChild(overlay);
+            setTimeout(() => overlay.remove(), 1000);
+            }
+        }
     }
 
     return (
