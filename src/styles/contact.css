@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
 @layer components {
-    .contact-section {
-        @apply min-h-screen flex flex-row p-6 justify-center items-center gap-6;
-    }
+  .contact-section {
+    @apply flex flex-col p-6 justify-center items-center gap-10;
+  }
+
+  .title-text {
+    @apply text-[clamp(4rem,9vw,9rem)] text-center font-extrabold;
+  }
+
+  .sub-text {
+    @apply text-center text-[clamp(0.9rem,2vw,1.5rem)];
+  }
+
+  .btn {
+    @apply p-4 w-48 font-extrabold rounded-2xl cursor-pointer flex-1 whitespace-nowrap;
+    background-color: var(--secondary-color);
+    color: #1c1c1c;
+  }
+
+  .work-text {
+    @apply text-[clamp(5rem,9vw,10rem)];
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+  }
 }
