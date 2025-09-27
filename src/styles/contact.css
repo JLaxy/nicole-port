@@ -14,7 +14,7 @@
   }
 
   .btn {
-    @apply p-4 w-48 font-extrabold rounded-2xl cursor-pointer flex-1 whitespace-nowrap;
+    @apply p-4 w-48 font-extrabold rounded-2xl cursor-pointer flex-1 whitespace-nowrap hover:bg-[#d1bfa6] active:bg-[#b8a892];
     background-color: var(--secondary-color);
     color: #1c1c1c;
   }

@@ -37,7 +37,7 @@ export default function Socials() {
         </div>
       </article>
       <article className="flex-row hidden md:flex">
-        <div className="flex-col bg-amber-800 w-full items-end flex">
+        <div className="flex-col w-full items-end flex">
           <section className="hero-socials-item">
             <p className="sub-text text-[clamp(0.84375rem,2.8vw,1.3rem)]">
               facebook

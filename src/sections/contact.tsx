@@ -15,10 +15,9 @@ export default function Contact() {
             "Ready to turn your brand's story into content people connect with? - I'd love to help you make that happen."
           }
         </section>
-        <div className="flex gap-5">
-          <button className="btn">{"Send me an Email"}</button>
-          <button className="btn">{"Let's Talk!"}</button>
-        </div>
+        <a href="#email">
+          <button className="btn">Send me an Email</button>
+        </a>
       </article>
       <Socials />
     </>
