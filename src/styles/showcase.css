@@ -2,45 +2,58 @@
 
 @layer components {
     .showcase-section {
-        @apply min-h-screen flex flex-col items-center justify-center;
+        /* remove fixed height */
+        @apply min-h-screen p-10 flex flex-col items-center justify-center space-y-3 lg:space-y-5;
+    }
+
+    .showcase-section p {
+        @apply text-lg lg:text-xl leading-relaxed pt-6;
     }
 
     .video-container {
-        @apply flex flex-row gap-6 justify-start px-10 py-6 overflow-x-auto;
+        @apply flex flex-row space-x-5 justify-start overflow-x-auto;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
     }
 
     .video-container > div {
-        width: calc(100vw - 5rem); /* full width minus padding */
-        max-width: 24rem;
         scroll-snap-align: center;
     }
 
-    .video-container video {
-        @apply flex-shrink-0 rounded-xl shadow-lg w-full;
+    .video-card {
+        @apply relative w-full md:w-96 flex-shrink-0;
+    }
+
+    /* keep video inside 9/16 aspect box */
+    .video-card .video-wrapper {
+        @apply relative aspect-[9/16] w-full;
+    }
+
+    .video-card video {
+        @apply rounded-xl shadow-lg w-full h-full object-cover;
     }
 
     /* Hide scrollbars on mobile */
     @media (max-width: 767px) {
         .video-container::-webkit-scrollbar {
-        display: none; /* Chrome, Safari */
+            display: none; /* Chrome, Safari */
         }
         .video-container {
-        -ms-overflow-style: none;  /* IE & Edge */
-        scrollbar-width: none;     /* Firefox */
+            -ms-overflow-style: none;  /* IE & Edge */
+            scrollbar-width: none;     /* Firefox */
         }
     }
 
     /* Desktop & md+ */
     @media (min-width: 768px) {
         .video-container {
-        @apply flex-wrap justify-center overflow-x-visible px-6;
-        scroll-snap-type: none;
+            @apply flex-wrap justify-center overflow-x-visible px-6;
+            scroll-snap-type: none;
         }
 
         .video-container > div {
-        width: auto; /* let videos size naturally */
+            width: auto; 
+            max-width: 18rem; /* smaller fixed size on desktop */
         }
     }
 }

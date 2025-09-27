@@ -49,5 +49,5 @@ html {
 }
 
 .title-other {
-  @apply text-6xl text-center;
+  @apply text-4xl lg:text-6xl text-center;
 }

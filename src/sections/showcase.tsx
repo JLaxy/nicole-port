@@ -1,10 +1,11 @@
 "use client";
 
+import { VideoItem } from "@/data/video-data";
 import "@/styles/showcase.css";
 import { useState, useEffect, useRef } from "react";
 
 export default function Showcase() {
-    const [videos, setVideos] = useState<string[]>([]);
+    const [videos, setVideos] = useState<VideoItem[]>([]);
     const [activeIndex, setActiveIndex] = useState(0);
     const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -82,13 +83,14 @@ export default function Showcase() {
 
             // show overlay only on desktop
             if (!video.parentElement?.querySelector(".muted-overlay")) {
-            const overlay = document.createElement("div");
-            overlay.className =
-                "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-1 pointer-events-none";
-            overlay.textContent = "🔇 Muted";
-            video.parentElement?.appendChild(overlay);
-            setTimeout(() => overlay.remove(), 1000);
+                const overlay = document.createElement("div");
+                overlay.className =
+                    "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-10 pointer-events-none";
+                overlay.textContent = "🔇 Muted";
+                video.parentElement?.appendChild(overlay);
+                setTimeout(() => overlay.remove(), 1000);
             }
+
         }
     }
 
@@ -99,25 +101,28 @@ export default function Showcase() {
             </h1>
 
             <div ref={containerRef} className="video-container w-full">
-                {videos.map((src, idx) => (
-                <div key={idx} className="relative w-full md:w-96 flex-shrink-0">
-                    <video
-                    controls
-                    muted
-                    playsInline
-                    loop
-                    preload="metadata"
-                    poster={src + "#t=0.1"}
-                    className="w-full md:w-96"
-                    >
-                    <source src={src} type="video/mp4" />
-                    </video>
+                {videos.map((video, idx) => (
+                <div key={idx} className="video-card">
+                    <div className="video-wrapper">
+                        <video
+                        controls
+                        muted
+                        playsInline
+                        loop
+                        preload="metadata"
+                        poster={video.url + "#t=0.1"}
+                        >
+                        <source src={video.url} type="video/mp4" />
+                        </video>
+                    </div>
+
+                    <p>{video.description}</p>
                 </div>
                 ))}
             </div>
 
             {/* Pagination only mobile */}
-            <div className="flex md:hidden justify-center mt-4 space-x-2">
+            <div className="flex md:hidden justify-center space-x-2">
                 {videos.map((_, idx) => (
                 <span
                     key={idx}

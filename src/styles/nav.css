@@ -2,13 +2,13 @@
 
 @layer components {
     .nav-div {
-        @apply fixed mt-3 left-1/2 transform -translate-x-1/2 
-                w-11/12 sm:w-3/4 lg:w-2/3 xl:w-1/2 
-                bg-white shadow-md z-50 rounded-2xl overflow-hidden text-neutral-900
-                select-none;
+        @apply fixed top-2 left-1/2 transform -translate-x-1/2 
+               w-11/12 sm:w-4/5 lg:w-2/3 xl:w-1/2 
+               bg-white shadow-md z-50 rounded-xl overflow-hidden text-neutral-900
+               select-none;
     }
     .nav-title {
-        @apply font-bold text-2xl;
+        @apply font-bold text-xl; /* slightly smaller */
         font-family: var(--heading-font);
         color: var(--primary-color);
     }
@@ -18,10 +18,10 @@
     }
     .nav-style {
         @apply bg-black text-white;
-        font-family: var(--secondary-font); 
+        font-family: var(--secondary-font);
     }
     .nav-link {
-        @apply uppercase;
+        @apply uppercase text-sm tracking-wide; /* compact text */
     }
     .nav-link:hover {
         color: var(--secondary-color);

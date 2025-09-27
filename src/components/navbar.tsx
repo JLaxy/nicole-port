@@ -10,22 +10,18 @@ export function Navbar() {
 
   return (
     <nav className="nav-div nav-style">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto px-3 sm:px-4">
         {/* Top Bar */}
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-12 items-center">
           {/* Logo */}
           <a href="#home" className="nav-title">
             MAI UGC
           </a>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-4">
             {navbarData.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-              >
+              <a key={item.href} href={item.href} className="nav-link">
                 {item.label}
               </a>
             ))}
@@ -34,7 +30,7 @@ export function Navbar() {
           {/* Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden hover:text-white"
+            className="md:hidden hover:text-white text-lg"
           >
             {isOpen ? "✕" : "☰"}
           </button>
@@ -43,7 +39,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden py-2 px-4 pb-4 space-y-2">
+        <div className="md:hidden py-2 px-3 space-y-1 text-sm">
           {navbarData.map((item) => (
             <a
               key={item.href}
