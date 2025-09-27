@@ -5,7 +5,7 @@ import "@/styles/contact.css";
 
 export default function Contact() {
   return (
-    <>
+    <div className="min-h-screen flex flex-col justify-center">
       <article className="contact-section mb-8">
         <section className="title-text">
           LETS <span className="work-text">WORK</span> TOGETHER
@@ -20,6 +20,6 @@ export default function Contact() {
         </a>
       </article>
       <Socials />
-    </>
+    </div>
   );
 }
