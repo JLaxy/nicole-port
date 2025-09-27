@@ -74,17 +74,17 @@ export default function Showcase() {
         video.playsInline = true;
 
         if (isMobile) {
-            video.muted = false;   // 🔊 allow sound
+            video.muted = false;   // allow sound
             video.play().catch(() => console.log("Autoplay blocked (mobile)"));
         } else {
-            video.muted = true;    // 🔇 mute on desktop
+            video.muted = true;    // mute on desktop
             video.play().catch(() => console.log("Autoplay blocked (desktop)"));
 
             // show overlay only on desktop
             if (!video.parentElement?.querySelector(".muted-overlay")) {
             const overlay = document.createElement("div");
             overlay.className =
-                "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-50 pointer-events-none";
+                "muted-overlay absolute inset-0 bg-black/80 flex items-center justify-center text-white text-sm z-1 pointer-events-none";
             overlay.textContent = "🔇 Muted";
             video.parentElement?.appendChild(overlay);
             setTimeout(() => overlay.remove(), 1000);
@@ -94,39 +94,39 @@ export default function Showcase() {
 
     return (
         <div className="showcase-section" id="showcase">
-        <h1 className="title-other">
-            VIDEO <span className="title-other title-highlight">REVIEWS</span>
-        </h1>
+            <h1 className="title-other">
+                VIDEO <span className="title-other title-highlight">REVIEWS</span>
+            </h1>
 
-        <div ref={containerRef} className="video-container w-full">
-            {videos.map((src, idx) => (
-            <div key={idx} className="relative w-full md:w-96 flex-shrink-0">
-                <video
-                controls
-                muted
-                playsInline
-                loop
-                preload="metadata"
-                poster={src + "#t=0.1"}
-                className="w-full md:w-96"
-                >
-                <source src={src} type="video/mp4" />
-                </video>
+            <div ref={containerRef} className="video-container w-full">
+                {videos.map((src, idx) => (
+                <div key={idx} className="relative w-full md:w-96 flex-shrink-0">
+                    <video
+                    controls
+                    muted
+                    playsInline
+                    loop
+                    preload="metadata"
+                    poster={src + "#t=0.1"}
+                    className="w-full md:w-96"
+                    >
+                    <source src={src} type="video/mp4" />
+                    </video>
+                </div>
+                ))}
             </div>
-            ))}
-        </div>
 
-        {/* Pagination only mobile */}
-        <div className="flex md:hidden justify-center mt-4 space-x-2">
-            {videos.map((_, idx) => (
-            <span
-                key={idx}
-                className={`h-2 w-2 rounded-full transition-all ${
-                idx === activeIndex ? "bg-black scale-110" : "bg-gray-400"
-                }`}
-            />
-            ))}
-        </div>
+            {/* Pagination only mobile */}
+            <div className="flex md:hidden justify-center mt-4 space-x-2">
+                {videos.map((_, idx) => (
+                <span
+                    key={idx}
+                    className={`h-2 w-2 rounded-full transition-all ${
+                    idx === activeIndex ? "bg-black scale-110" : "bg-gray-400"
+                    }`}
+                />
+                ))}
+            </div>
         </div>
     );
 }
