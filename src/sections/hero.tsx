@@ -5,10 +5,13 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import "@/styles/hero.css";
+import SocialItem from "@/components/social-item";
+import { email, facebook, instagram, tiktok } from "@/types/constants/socials";
 
 export default function Hero() {
   const iconsSize = "clamp(1.5rem,6vw,2.5rem)";
   const desktopIconSize = "40px";
+
   return (
     <div className="min-h-screen">
       {/*Mobile*/}
@@ -25,30 +28,26 @@ export default function Hero() {
         {/* SOCIALS DIV*/}
         <div className="hero-socials-gridbox">
           <div className="hero-socials-div">
-            <div className="hero-socials-item">
-              <FaFacebookSquare size={iconsSize} />
-              <p className="sub-text text-[clamp(0.84375rem,2.8vw,1.3rem)]">
-                facebook
-              </p>
-            </div>
-            <div className="hero-socials-item">
-              <AiFillTikTok size={iconsSize} />
-              <p className="sub-text text-[clamp(0.84375rem,2.8vw,1.3rem)]">
-                @maivlltr
-              </p>
-            </div>
-            <div className="hero-socials-item">
-              <PiInstagramLogoFill size={iconsSize} />
-              <p className="sub-text text-[clamp(0.84375rem,2.8vw,1.3rem)]">
-                @maivlltr
-              </p>
-            </div>
-            <div className="hero-socials-item">
-              <MdEmail size={iconsSize} />
-              <p className="sub-text text-[clamp(0.84375rem,2.8vw,1.3rem)]">
-                you@example.com
-              </p>
-            </div>
+            <SocialItem
+              icon={<FaFacebookSquare size={iconsSize} />}
+              text={facebook.handle}
+              link={facebook.link}
+            />
+            <SocialItem
+              icon={<AiFillTikTok size={iconsSize} />}
+              text={tiktok.handle}
+              link={tiktok.link}
+            />
+            <SocialItem
+              icon={<PiInstagramLogoFill size={iconsSize} />}
+              text={instagram.handle}
+              link={instagram.link}
+            />
+            <SocialItem
+              icon={<MdEmail size={iconsSize} />}
+              text={email.handle}
+              link={email.link}
+            />
           </div>
         </div>
       </div>
@@ -60,22 +59,26 @@ export default function Hero() {
           <p className="font-bold">UGC PORTFOLIO</p>
         </div>
         <div className="hero-desktop-socials-div">
-          <div className="hero-socials-item">
-            <FaFacebookSquare size={desktopIconSize} />
-            <p className="sub-text text-lg">facebook</p>
-          </div>
-          <div className="hero-socials-item">
-            <AiFillTikTok size={desktopIconSize} />
-            <p className="sub-text text-lg">@maivlltr</p>
-          </div>
-          <div className="hero-socials-item">
-            <PiInstagramLogoFill size={desktopIconSize} />
-            <p className="sub-text text-lg">@maivlltr</p>
-          </div>
-          <div className="hero-socials-item">
-            <MdEmail size={desktopIconSize} />
-            <p className="sub-text text-lg">you@example.com</p>
-          </div>
+          <SocialItem
+            icon={<FaFacebookSquare size={desktopIconSize} />}
+            text={facebook.handle}
+            link={facebook.link}
+          />
+          <SocialItem
+            icon={<AiFillTikTok size={desktopIconSize} />}
+            text={tiktok.handle}
+            link={tiktok.link}
+          />
+          <SocialItem
+            icon={<PiInstagramLogoFill size={desktopIconSize} />}
+            text={instagram.handle}
+            link={instagram.link}
+          />
+          <SocialItem
+            icon={<MdEmail size={desktopIconSize} />}
+            text={email.handle}
+            link={email.link}
+          />
         </div>
       </div>
     </div>
