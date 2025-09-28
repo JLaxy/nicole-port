@@ -56,4 +56,22 @@
             max-width: 18rem; /* smaller fixed size on desktop */
         }
     }
+
+    @keyframes bounce-right {
+        0%, 100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(10px);
+        }
+    }
+
+    .animate-bounce-right {
+        animation: bounce-right 1s infinite;
+    }
+
+    .swipe-overlay {
+        backdrop-filter: blur(2px);
+    }
 }
+

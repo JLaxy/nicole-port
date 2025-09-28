@@ -7,7 +7,9 @@ import { useState, useEffect, useRef } from "react";
 export default function Showcase() {
     const [videos, setVideos] = useState<VideoItem[]>([]);
     const [activeIndex, setActiveIndex] = useState(0);
+    const [showSwipeOverlay, setShowSwipeOverlay] = useState(true);
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const hasSwipedRef = useRef(false);
 
     // Fetch videos from API
     useEffect(() => {
@@ -22,9 +24,15 @@ export default function Showcase() {
         if (!container) return;
 
         const handleScroll = () => {
-        const { scrollLeft, offsetWidth } = container;
-        const index = Math.round(scrollLeft / offsetWidth);
-        setActiveIndex(index);
+            const { scrollLeft, offsetWidth } = container;
+            const index = Math.round(scrollLeft / offsetWidth);
+            setActiveIndex(index);
+            
+            // Hide swipe overlay after first swipe
+            if (!hasSwipedRef.current && index > 0) {
+                hasSwipedRef.current = true;
+                setShowSwipeOverlay(false);
+            }
         };
 
         container.addEventListener("scroll", handleScroll);
@@ -90,9 +98,18 @@ export default function Showcase() {
                 video.parentElement?.appendChild(overlay);
                 setTimeout(() => overlay.remove(), 1000);
             }
-
         }
     }
+
+    // Auto-hide swipe overlay
+    useEffect(() => {
+        if (showSwipeOverlay) {
+            const timer = setTimeout(() => {
+                setShowSwipeOverlay(false);
+            }, 3500);
+            return () => clearTimeout(timer);
+        }
+    }, [showSwipeOverlay]);
 
     return (
         <div className="showcase-section" id="showcase">
@@ -103,7 +120,7 @@ export default function Showcase() {
             <div ref={containerRef} className="video-container w-full">
                 {videos.map((video, idx) => (
                 <div key={idx} className="video-card">
-                    <div className="video-wrapper">
+                    <div className="video-wrapper relative">
                         <video
                         controls
                         muted
@@ -114,9 +131,21 @@ export default function Showcase() {
                         >
                         <source src={video.url} type="video/mp4" />
                         </video>
+                        
+                        {/* Swipe Overlay - Mobile Only */}
+                        {idx === 0 && showSwipeOverlay && (
+                            <div className="swipe-overlay md:hidden absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+                                <div className="text-white text-center">
+                                    <div className="swipe-icon animate-bounce-right text-2xl">
+                                        👉
+                                    </div>
+                                    <p className="text-sm font-medium">Swipe right to see more videos</p>
+                                </div>
+                            </div>
+                        )}
                     </div>
-
-                    <p>{video.description}</p>
+                    <h1 className="title-highlight text-2xl lg:text-3xl text-center font-bold pt-6">{video.title}</h1>
+                    <p className="text-center">{video.description}</p>
                 </div>
                 ))}
             </div>
