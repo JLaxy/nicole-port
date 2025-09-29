@@ -17,7 +17,7 @@
   }
 
   .hero-mobile-title-div {
-    @apply flex flex-col mr-10 items-end justify-center;
+    @apply flex flex-col mr-10 items-end justify-center mt-10;
   }
 
   .hero-desktop-title-div {

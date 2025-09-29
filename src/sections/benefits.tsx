@@ -75,7 +75,7 @@ export function BenefitsP2() {
         </div>
       </Animator>
       <Animator animation="slide-left">
-        <div className="benefit-right-side-content">
+        <div className="benefit-right-side-content ">
           <h1 className="title">
             {"Visual"} <span className="title-highlight">{"Storytelling"}</span>
           </h1>

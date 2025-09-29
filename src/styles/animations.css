@@ -17,7 +17,7 @@
   }
 
   .slide-left.show {
-    transform: translateX(0);
+    transform: translateX(0%);
     opacity: 100;
   }
 
@@ -28,7 +28,7 @@
   }
 
   .slide-right.show {
-    transform: translateX(0);
+    transform: translateX(0%);
     opacity: 100;
   }
 
@@ -39,7 +39,7 @@
   }
 
   .slide-up.show {
-    transform: translateY(0);
+    transform: translateY(0%);
     opacity: 100;
   }
 
@@ -50,7 +50,7 @@
   }
 
   .slide-down.show {
-    transform: translateY(0);
+    transform: translateY(0%);
     opacity: 100;
   }
 }
