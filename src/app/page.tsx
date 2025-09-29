@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 export default function HomePage() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <section id="home" className="relative z-10">
         <Hero />
       </section>
