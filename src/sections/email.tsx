@@ -26,10 +26,10 @@ export default function EmailSection() {
     e.preventDefault();
 
     const res = await emailerService.sendEmail(email); // Send email
-    console.log("Email submitted:", email);
+    // console.log("Email submitted:", email);
 
     if (res.status !== 200) {
-      console.log("Failed to send email: ", res);
+      // console.log("Failed to send email: ", res);
       toast.error("Failed to send email! Please try again.");
       return;
     }

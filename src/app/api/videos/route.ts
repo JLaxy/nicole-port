@@ -22,7 +22,7 @@ export async function GET() {
 
     return NextResponse.json(videos);
   } catch (error) {
-    console.error("API error:", error);
+    // console.error("API error:", error);
     return NextResponse.json({ error: "Failed to load videos" }, { status: 500 });
   }
 }
