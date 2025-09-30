@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from "react";
 export default function Animator({
   children,
   animation,
+  className = "",
 }: {
   children: React.ReactNode;
   animation: string;
+  className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +34,10 @@ export default function Animator({
   }, []);
 
   return (
-    <div ref={ref} className={`${animation} ${isVisible ? "show" : ""}`}>
+    <div
+      ref={ref}
+      className={`${className} ${animation} ${isVisible ? "show" : ""}`}
+    >
       {children}
     </div>
   );

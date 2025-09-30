@@ -68,12 +68,14 @@ export default function About() {
       </div>
 
       {/* Right Side Content */}
-      <Animator animation="slide-left">
-        <div className="right-side-content justify-center">
+      <div className="right-side-content justify-center">
+        <Animator animation="slide-left">
           <h1 className="title">
             {"HI, I'M "}
             <span className="title title-highlight">MAI</span>
           </h1>
+        </Animator>
+        <Animator animation="slide-left">
           <p>
             {
               "I create engaging and authentic content for restaurants to help them gain visibility—especially on TikTok. While I'm new to the UGC, I come with knowledge in marketing as I'm currently studying Marketing Management."
@@ -94,8 +96,8 @@ export default function About() {
               "Right now, I'm focused on food and restaurant content, but I'm also looking forward to exploring product-based content in the future."
             }
           </p>
-        </div>
-      </Animator>
+        </Animator>
+      </div>
     </div>
   );
 }
