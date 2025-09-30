@@ -11,7 +11,7 @@ export async function POST(req: Request) {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+        access_key: process.env.WEB3FORMS_SECRET_KEY,
         name: body.name,
         email: body.email,
         message: `Subject: ${body.subject}\n\n${body.message}`,
